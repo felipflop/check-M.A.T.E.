@@ -7,8 +7,7 @@ api_token_path = "/home/flop/api-token.txt"
 board = CheckMATE(api_token_path)
 
 def main():
-    board.client_connect()
-    board.get_info()
+    board.menu()
 
 if __name__ == '__main__':
     main()
