@@ -1,0 +1,4 @@
+src/__pycache__
+
+# Ignore virtual environment
+checkmate_venv/ 
