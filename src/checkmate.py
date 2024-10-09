@@ -9,20 +9,23 @@ class CheckMATE:
     def begin(self):
         self.client.connect()
 
-    def run(self):
-        self.game = ChessGame()
-        self.game.print_board()
+    def play_player(self):
+        # self.game = ChessGame()
+        # self.game.print_board()
 
-        """ call client to request game -> return colour """
-        # colour = client.start_game()
-        colour = "black"
+        # """ call client to request game -> return colour """
+        # # colour = client.start_game()
+        # colour = "black"
     
-        if colour is "black":
-            # move = client.get_first_move()
-            move = "e2e4"
-            # self.game.board.push_san(move)
-            self.game.move_piece(move)
-            self.game.print_board()
+        # if colour is "black":
+        #     # move = client.get_first_move()
+        #     move = "e2e4"
+        #     # self.game.board.push_san(move)
+        #     self.game.move_piece(move)
+        #     self.game.print_board()
+    
+    def play_bot():
+        return 
 
     def menu(self):
         while True:
