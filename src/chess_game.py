@@ -1,7 +1,5 @@
 import chess
 
-board = chess.Board()
-
 class ChessGame():
     def __init__(self):
         self.board = chess.Board()
@@ -13,10 +11,5 @@ class ChessGame():
         print(self.board.legal_moves)
 
     def move_piece(self, uci_move):
-        # uci = chess.Move.from_uci(uci_move)
-        # move = self.board.parse_uci(uci)
-        # self.board.push_san(move)
+        self.board.push_uci(uci_move)
     
-        
-if __name__ == "__main__":
-    main()
