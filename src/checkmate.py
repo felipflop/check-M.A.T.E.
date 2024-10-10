@@ -27,18 +27,26 @@ class CheckMATE:
             if move == 'q':
                 break
 
+            elif not self.game.is_legal(move):
+                print("Invalid!")
+                continue
+
             else:
                 self.game.move_piece(move)
                 self.refresh_board()
     
+        self.game.reset_board()
         self.clear_screen()
 
-    def play_robot():
-        return 
+    def play_robot(self):
+        self.refresh_board()
+        self.clear_screen()
 
     def menu(self):
+        self.clear_screen()
+
         while True:
-            option = input("Enter an option:\n1: Play online\n2: Play robot\n3: Account Information\n4: Exit\n")
+            option = input("Enter an option:\n1: Play online\n2: Play robot\n3: Account Information\n4: Exit\n\nSelection: ")
 
             if option == '1':
                 self.play_player()
@@ -50,6 +58,8 @@ class CheckMATE:
                 break
             else:
                 print("Invalid!")
+                time.sleep(1)
+                self.clear_screen()
 
             
 
